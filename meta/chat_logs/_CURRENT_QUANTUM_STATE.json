@@ -1,0 +1,29 @@
+{
+  "history": [
+    {
+      "role": "USER",
+      "message": "Let's test the enhanced quantum logger!",
+      "timestamp": "2024-11-30T09:58:54.846732-03:00",
+      "quantum_state": {
+        "preserved_formatting": true,
+        "complete_content": true,
+        "length": 39
+      }
+    },
+    {
+      "role": "ASSISTANT",
+      "message": "I've made improvements to prevent truncation and ensure complete logging.\n\nHere are the key changes:\n1. Added timestamps\n2. Better formatting\n3. Validation checks\n4. No more shorthand or truncation",
+      "timestamp": "2024-11-30T09:58:54.847711-03:00",
+      "quantum_state": {
+        "preserved_formatting": true,
+        "complete_content": true,
+        "length": 197
+      }
+    }
+  ],
+  "timestamp": "2024-11-30T09:58:54.847774-03:00",
+  "meta": {
+    "format_version": "2.0",
+    "preservation_level": "complete"
+  }
+}

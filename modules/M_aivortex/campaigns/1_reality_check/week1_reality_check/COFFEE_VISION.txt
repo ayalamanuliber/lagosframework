@@ -1,0 +1,62 @@
+The Day Our AI Became Obsessed With My Coffee Mug
+
+Look, I'm not saying I broke our computer vision system with my coffee addiction. But also... I totally broke our computer vision system with my coffee addiction.
+
+It's actually kind of impressive how one dirty coffee mug can bring down an entire AI image recognition pipeline. Though my team lead probably wouldn't use the word "impressive."
+
+Let me explain.
+
+We were building this fancy image recognition system for a retail client. You know the type - point your phone at a product, get all the details, very future-is-now stuff. TensorFlow, ResNet backbone, custom object detection heads, the whole shebang. My baby.
+
+The training was going great. 97.3% accuracy on the test set. Clean confusion matrices. Beautiful precision-recall curves. That kind of project where you start practicing your conference talk in the shower.
+
+Then came The Mug.
+
+See, I have this habit of keeping my coffee mug in frame while I'm debugging. It's this massive thing with circuit board patterns that I got at a hackathon. Real developer aesthetic™. And I tend to... forget about it.
+
+So there I was, running another training batch at 3 AM (because when else do you train models?), webcam on for monitoring the training dashboard. My mug, faithful companion that it is, sitting right there in frame.
+
+For six hours.
+
+In the same spot.
+
+While I was feeding thousands of product images through the system.
+
+Did you know that if a neural network sees the same object in the background of enough training images, it starts thinking that object is... important?
+
+Yeah. Neither did I.
+
+First sign something was wrong: our model started detecting coffee mugs in pictures that definitely didn't have coffee mugs. Like, "Sorry, I can't identify that laptop because I'm too distracted by the coffee mug that isn't there" kind of wrong.
+
+Product team: "Here's a smartphone."
+AI: "Interesting angle of a coffee mug."
+Product team: "No, it's the new iPhone."
+AI: "Ah, I see the confusion. It's actually a very shiny coffee mug."
+
+But it gets better.
+
+The model didn't just see coffee mugs everywhere - it had become a coffee mug CONNOISSEUR. Started classifying non-existent mugs by style and probable coffee content:
+
+"Vintage ceramic mug, likely containing single-origin Ethiopian beans, notes of bergamot."
+"Modern minimalist mug, approximately 73% full of what appears to be an americano."
+"IKEA VARDAGEN mug circa 2019, tragically empty."
+
+This last one was actually about a potted plant.
+
+My favorite bug report came from the UX team:
+"Model keeps warning users their coffee is getting cold. There is no coffee in the test image. Image is of a tennis ball."
+
+Turns out my mug had appeared in exactly 12,487 training images. Always in the same spot. Always with varying levels of coffee. The model had basically written a doctoral thesis on coffee mug analytics instead of learning product recognition.
+
+The fix wasn't even hard - just had to clean the training data and retrain. But try explaining to your project manager why you need two extra days because "the AI got really into coffee."
+
+We did eventually get it working properly. Though sometimes, when the lighting is just right, it still gets a bit... wistful about coffee mugs.
+
+The whole thing is now immortalized in our team's coding guidelines:
+"Rule 17: No beverage containers in frame during training. Yes, this is because of That One Time."
+
+I switched to a water bottle after that. Clear, minimal, no interesting patterns.
+
+Though lately our model's been making some interesting observations about hydration habits...
+
+Got any stories about AI developing weird fixations? Drop them below. Bonus points if it involved caffeine, double points if it happened during a late-night training session. Because let's be honest - all the best AI stories start with "So I was up at 3 AM..."

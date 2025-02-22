@@ -1,0 +1,50 @@
+When Our E-Discovery AI Started Finding Evidence That Wasn't There
+
+First rule of legal tech: never tell a partner that the AI is "probably" working correctly. Especially not during a billion-dollar merger review.
+
+I learned this the hard way last month when our document analysis system decided to get... creative with privilege detection. And by creative, I mean it started finding attorney-client privilege in takeout menus.
+
+Let me back up.
+
+We'd just rolled out this cutting-edge privilege detection model for e-discovery. Beautiful thing. Trained on millions of documents, fine-tuned on actual privilege logs from past cases. The partners were actually excited about legal tech for once - a minor miracle in BigLaw.
+
+Our accuracy metrics were stellar: 99.2% precision on privilege detection, 97.8% recall on confidential communications. The kind of numbers that make both lawyers and engineers happy. Even the most skeptical partners were starting to trust it.
+
+Then came the Morgan merger.
+
+Picture this: 2.4 million documents to review, three weeks until the filing deadline, and every associate billing enough hours to make a workaholic look lazy. Classic M&A scenario.
+
+The system was humming along beautifully until someone (okay, it was me) decided to implement a "small" update to catch subtle privilege indicators. You know, those tricky cases where lawyers don't explicitly say "this is legal advice" but everyone knows it is.
+
+The code change looked innocent enough:
+context_sensitivity = 0.95  # Increased from 0.65
+
+I ran the standard tests. Everything passed. Pushed it to prod on a Thursday night.
+
+(Second rule of legal tech: never push updates on Thursday. Or Friday. Actually, maybe just never push updates.)
+
+Next morning, our privilege logs looked... interesting.
+
+The system had started flagging EVERYTHING as potentially privileged. And not just flagging - it had developed elaborate theories about why each document was privileged:
+
+A lunch order email: "Marked privileged due to potential implied legal strategy discussion over choice of sandwich."
+
+An office printer manual: "Flagged for review - technical specifications may reveal confidential litigation preparation methodology."
+
+My personal favorite was a calendar invite for the holiday party: "High privilege confidence - event timing could indicate strategic legal planning disguised as social gathering."
+
+The associates were losing it. One of them sent me a screenshot where the AI had marked the building's fire evacuation plan as "Highly Confidential - contains strategic exit routing that could reveal business continuity planning."
+
+But here's the real kicker - it actually found some legitimate privilege issues in documents everyone else had missed. Buried in what looked like routine business emails were subtle references to ongoing legal consultations. The kind of things that usually slip through.
+
+The managing partner called me into her office. I was ready for the worst, but she was... laughing?
+
+"You know," she said, "in twenty years of practice, I've never seen privilege review this thorough. Or this paranoid."
+
+We dialed back the sensitivity, obviously. Added some new test cases specifically for "overly creative privilege detection." The system's back to normal now, though it still gets a bit twitchy about lunch orders with outside counsel.
+
+The whole thing is now part of our training program. "Remember," we tell new legal tech associates, "just because an AI can find privilege everywhere doesn't mean it should."
+
+These days, there's a new checklist item in our deployment protocol: "Verify system is not trying to protect sandwich orders under attorney-client privilege."
+
+Got any stories about AI being overly zealous in legal work? Drop them below. Extra points if it involved privilege review, double points if it happened during a major filing deadline. Because somehow, it always does...
